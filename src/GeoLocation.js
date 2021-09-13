@@ -1,13 +1,13 @@
 import React from "react";
 
 class GeoLocation extends React.Component {
-  getLocation() {
-    if (navigator.geolocation) {
-      console.log(navigator.geolocation.getCurrentPosition());
-    } else {
-      console.log("Geolocation is not supported by this browser.");
-    }
+  componentDidMount() {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      console.log("Latitude is", position.coords.latitude);
+      console.log("longitude is", position.coords.longitude);
+    });
   }
+
   render() {
     return (
       <div>
