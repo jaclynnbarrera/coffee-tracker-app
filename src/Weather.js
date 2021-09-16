@@ -1,18 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+
+const api = {
+  key: "ceb6657dfd5aab9f00e5b48bfde5c001",
+  base: "https://api.openweathermap.org/data/2.5/",
+};
 
 export default function Weather() {
-  const [lat, setLat] = useState([]);
-  const [long, setLong] = useState([]);
-
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      setLat(position.coords.latitude);
-      setLong(position.coords.longitude);
-    });
-
-    console.log("Latitude is:", lat);
-    console.log("Longitude is:", long);
-  }, [lat, long]);
+  const [query, setQuery] = useState("");
+  const [weather, setWeather] = useState({});
 
   return <div className="App"></div>;
 }
