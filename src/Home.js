@@ -1,12 +1,11 @@
 import React from "react";
-import GeoLocation from "./GeoLocation";
+import Weather from "./Weather";
 
 class Home extends React.Component {
   render() {
     return (
       <div>
-        <h1>Find Me Coffee</h1>
-        <GeoLocation />
+        <Weather />
       </div>
     );
   }

@@ -9,5 +9,9 @@ export default function Weather() {
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
 
-  return <div className="App"></div>;
+  return (
+    <div draggable className="weather">
+      Weather
+    </div>
+  );
 }
