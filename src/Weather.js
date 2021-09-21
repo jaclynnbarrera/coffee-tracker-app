@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Draggable from "react-draggable";
 
 const api = {
   key: "ceb6657dfd5aab9f00e5b48bfde5c001",
@@ -10,8 +11,8 @@ export default function Weather() {
   const [weather, setWeather] = useState({});
 
   return (
-    <div draggable className="weather">
-      Weather
-    </div>
+    <Draggable>
+      <div className="weather">Weather</div>
+    </Draggable>
   );
 }
